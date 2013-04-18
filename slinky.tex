@@ -1,0 +1,80 @@
+\documentclass[aps,pra,twocolumn,10pt,superscriptaddress,showpacs,amsmath,amssymb,nofootinbib]{revtex4-1}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{dcolumn}
+
+\begin{document}
+
+\title{A tale of two slinkies: ...}
+\author{Punit  Gandhi}
+\affiliation{Department of Physics, University of California at
+Berkeley, Berkeley, California 94720, USA}
+\email{punit_gandhi@berkeley.edu}
+\author{Jesse Livezey}
+\affiliation{Department of Physics, University of California at
+Berkeley, Berkeley, California 94720, USA}
+\author{Calvin Berggren}
+\affiliation{Department of Physics, University of California at
+Berkeley, Berkeley, California 94720, USA}
+\author{Ryan Olf}
+\affiliation{Department of Physics, University of California at
+Berkeley, Berkeley, California 94720, USA}
+\date{\today}
+
+\begin{abstract}
+
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+The slinky drop experiment is supercool, and suprises even experts who have never seen the result before.  This gave us a way to "level the playing field" for students with widely varying backgrounds    It has been studied in detail, cite some of the references, and we use it as a way to contextualize the model building process as we teach the students about models. 
+
+This curriculum was developed for an intensive one-week summer program for incoming freshmen as a part of the Compasss Project ~\cite{albana2013}. some details about compass?  The course was presented in a student-driven classroom where the role of the role of the instructors were to facilitate/guide/provide tools...  The important thing here is that the students developed the models themselves, and took ownership over them.  
+
+The two models are useful because they allow for comparing and contrasting. The masses and springs model actually tries to make a simplified model of the slinky and attempts to capture the effect we are looking at.  We can only take this model so far in gaining intuition for what we are after.    The wave model, is less interested in modeling the general behavior of the slinky, but can give great insight into the fact that the bottom seems to levitate.  This demonstrates the idea that the most useful  models  capture only the effect that we are after. 
+
+we did a exploritorium day with a bunch of activities to give students experiences with all the concepts we would see in the week.  This gave shared experiences for the students to draw from, and seeded some of the ideas that we wanted them to have.
+
+\section{Modeling a slinky with masses and springs}
+
+This model is very well motivated by thinking of the slinky in terms of rungs, and realizing how difficult it would be to model all the rungs.  Even with 2 masses and a spring, you can capture the effect that the bottom doesn't move (to leading order).  However, no matter how many masses and springs you use, the bottom will move before the top reaches it, so it doesn't quite capture the effect we see. 
+
+\subsection{Experimentally testing the simplified model}
+The simplified model can provide a path to analyze the effect of interest in the full problem, but we would like to make sure that the simplified model also captures the effect.  We can test this experimentally by building an experiment that is exactly described by the simplified model and making sure we see what we are looking for.  We had the students actually build model slinkies using rubberbands and metal nuts.  
+
+
+\subsection{Numerically testing the simplified model}
+It can be difficult to explore the model completely with experiments,  and it may also be hard to take useful measurements.  We had the students "simulate" the masses and springs model as a group. Each mass was represented by a group of students, who completed the calculations to figure out where the mass would be at the next time step.  We had to motivate the idea of discretizing time, which we did with frames on a movie?  After this activity, we had the students implement it with an excel spreadsheet.  
+
+This forced them to make certain decisions about the model and allowed them to find several limitations.  what happens when the top passes the mass below it?  what if the time step is too big?  should the time it takes for the bottom mass to move depend on the size of the time step?
+
+
+\section{Modeling the slinky drop experiment with wave propagation}
+
+Realizing the limitations of the  mass and springs model helps motivate waves in the slinky problem
+
+\subsection{understanding waves}
+ We did a bunch of activities to introduce the basic concepts of waves, but I don't think any of them were particularly new or interesting where they?
+
+\subsection{the wave pulse and the top of the slinky }
+The final resolution to the levitation slinky comes when the students compare the way the top of the slinky falls next to a wave pulse of a slinky that is just suspended.  There are still many unanswered questions still.
+
+the students spend the last couple of days on final projects in groups where they ask new questions or follow up on outsanding questions that we didn't have time for during the week.  
+
+
+\section{Discussion?}
+
+
+
+\section{Conclusions?}
+
+\acknowledgments 
+
+\bibliography{slinky_bibliography}
+
+\end{document}
