@@ -81,14 +81,38 @@ student gain understanding and develop a repetoir of scientific tools and
 methods.  The question may start out as "Does the slinky defy gravity?" and end
 up  "How does the bottom of the slinky know when to start falling?"
 
-The two models are useful because they allow for comparing and contrasting. The
-masses and springs model actually tries to make a simplified model of the slinky
-and attempts to capture the effect we are looking at.  We can only take this
-model so far in gaining intuition for what we are after.    The wave model, is
-less interested in modeling the general behavior of the slinky, but can give
-great insight into the fact that the bottom seems to levitate.  This
-demonstrates the idea that the most useful  models  capture only the effect that
-we are after.
+During the course of the program, we were able to approach the slinky in two different
+and highly complementary ways. One approach, detailed in \sec{forces}, used forces and Newton's Laws to calculate
+the motion of the slinky. In order to make this brute-force approach more tractable, we
+modeled the slinky as a series of discrete masses connected by simple springs. This
+model was conceptually very straightforward and allowed the students to follow an
+intuitive reductionist approach where they could divide the slinky into individual
+constituents and apply familiar rules to each part. Although the model turned out to
+be formidable to solve, it was still highly beneficial as it was restricted to the
+use of elementary physical concepts, which built up into a larger, more interesting
+phenomenon. Students were able to see how the different parts interacted and how they
+were interconnected.
+
+Despite the conceptual simplicity of the force-based model, however, the explanation
+required a large number of logical steps and a difficult calculation to arrive at
+the final conclusion. For this reason, we also made use of a complementary
+model based on information, detailed in \sec{information}. This approach attempted
+to describe the event when the slinky was let go as a piece of information which
+needs to travel to other parts of the system before they are able to respond. We
+used waves the attempt to characterize the speed at which the information travels. 
+As expected, information proved to be a much more sophisticated concept for the
+students to grasp but provided a great deal of insight into the experiment.
+
+The fact that the slinky drop lends itself so naturally to two very different models
+makes it an excellent backdrop for teaching model-building. Having explored both
+models, students are able to compare and contrast what kinds of insight are
+offered by each one. Each model makes different parts of the underlying physics
+more transparent. The great insight into the ``levitation'' provided by the
+information-based model demonstrates the idea that the most useful models
+capture only the effects that we are most interested in explaining. This curriculum
+also shows how very different models can be successful describing the same
+phenomenon. The models use different fundamental concepts and rules and approach
+the problem in very different ways, yet obtain the same results. 
 
 we did a exploritorium day with a bunch of activities to give students
 experiences with all the concepts we would see in the week.  This gave shared
@@ -109,16 +133,19 @@ along with lots of tape.
 
 
 
-\section{Modeling a slinky with masses and springs}
+\section{Modeling the slinky using forces}
+\label{sec:forces}
 
-This model is very well motivated by thinking of the slinky in terms of rungs,
-and realizing how difficult it would be to model all the rungs.  Even with 2
-masses and a spring, you can capture the effect that the bottom doesn't
-initially move (to leading order).  However, no matter how many masses and
-springs you use, the bottom will move before the top reaches it, so it doesn't
-quite capture the effect we see.
+For this model, the slinky was represented as a series of discrete masses, each
+connected to the next by a simple spring, as shown in \fig{discrete}. The strategy
+was to find the forces (gravity and elastic) acting on each mass as a function of position and then
+apply Newton's Laws to find the resulting motion. We first approached this model
+by actually building such a series of discrete masses and taking measurements of
+the motion (\subsec{forcesexperiment}). We then attempted to solve the equations
+of motion numerically to find the motion (\subsec{forcesnumeric}).
 
 \subsection{Experimentally testing the simplified model}
+\label{subsec:forcesexperiment}
 The simplified model can provide a path to analyze the effect of interest in the
 full problem, but we would like to make sure that the simplified model also
 captures the effect.  We can test this experimentally by building an experiment
@@ -131,6 +158,7 @@ for various springs.
 
 
 \subsection{Numerically testing the simplified model}
+\label{subsec:forcesnumeric}
 Having taken the step toward understanding the slinky using a model with
 discrete masses separated by springs, we sought to make further progress by
 solving this model numerically. The students spent some time constructing the
@@ -222,7 +250,7 @@ calculated much faster, albeit less collaboratively. We had the students impleme
 felt comfortable with the details of the process. This allowed them to explore some of the follow
 up questions more efficiently.
 
-\section{Modeling the slinky drop experiment with wave propagation}
+\section{Modeling the slinky using information}
 \label{sec:information}
 
 Realizing the limitations of the  mass and springs model helps motivate waves in
