@@ -33,7 +33,7 @@
 \newcommand{\FIGstudents}{
 \begin{figure}[t]\center
 \includegraphics[width=\columnwidth]{FIGstudents.pdf}
-\caption{\label{fig:students} Students doing stuff with slinkies}
+\caption{\label{fig:students} Students from the 2012 Compass Project summer program with model slinkies built out of washers and rubberbands.}
 \end{figure}
 }
 
@@ -73,7 +73,8 @@ The falling slinky is an ideal tool for learning about model building because it
 \section{Introduction}
 
 
-(Describe slinky drop and lack of motion at the bottom briefly.) The slinky drop experiment has been studied in detail, \cite{.}.
+(Describe slinky drop and lack of motion at the bottom briefly.) The slinky drop experiment and other related phenomenon have
+ been studied in detail, \cite{calkin1993, newburgh1995, graham2001, aguirregabiria2007,unruh2011,  cross2012}.
 The slinky drop proved to be an interesting and challenging phenomenon and
 was very well suited to teaching the model building process in physics. In this work,
 we seek to describe how we used the slinky drop to give the students first-hand
@@ -157,22 +158,32 @@ We would like to explore the implications of the model without being constrained
 The students, with a little coaxing, decided that this could be done experimentally.  They built an 
 apparatus that is closely described by the simplified model, so that they could compare its behavior to that of the 
 actual slinky.  This was accomplished by tying metal nuts and washers (discrete masses) to 
-rubberbands (springs).  
+rubberbands (springs), examples are shown in Fig. \ref{fig:students}.  
+
+%\FIGstudents
+
+the process of attempting to recreate the aspect of the slinky drop of interest using washers and rubberbands  
+gave students some insight into the physical properties of the slinky that allowed for the bottom to  remain 
+stationary when the top was released.  In particular, the students realized that the models must be very "stretchy"
+in order to for this phenomenon to happen.  The students further realized how extremely stretchy the slinky is 
+relative to other objects.
+
+This stretchiness can be characterized by how much the object stretches
+under it's own weight as it is suspended.   We can define a slinky parameter as a measure of this:
+
+\begin{equation}
+\mathcal{S}=\frac{m g}{k_{eff} L_0 },
+\end{equation}
+where $m$ is the total mass of the slinky, $g$ is the gravitational acceleration felt as it is suspended, $k_{eff}$ is 
+the effective spring constant of the entire object, and $L_0$ is the unstretched length.  
+
+Now, in order to see that this parameter is a useful determining the "slinkiness", we can ...
+
 
 Comparing the physical realization of the model to the slinky 
 helps emphasize the distinction between the model and the actual phenomenon of interest.
 
  
-
-than the the origial slinky, but we would like to make sure that the simplified model also
-captures the effect.  We can test this experimentally by building an experiment
-that is exactly described by the simplified model and making sure we see what we
-are looking for.  We had the students actually build model slinkies using
-rubberbands and metal nuts.  It would be useful to redo the experiments here.
-Actual measurements of the spring constant of the slinky, and that of the model 
-should go here.  We also could define "Slinkiness" and have measurements of it
-for various springs.
-
 
 \subsection{Numerically testing the simplified model}
 \label{subsec:forcesnumeric}
