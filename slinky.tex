@@ -7,6 +7,17 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{dcolumn}
 
+\textwidth  .72\paperwidth
+\hoffset -1in
+\oddsidemargin .14\paperwidth
+\evensidemargin .14\paperwidth
+\marginparwidth .11\paperwidth
+
+
+% Draft macros
+\newcommand{\TODO}[1]{\marginpar{\raggedright\scriptsize\textbf{TODO:} #1} (\textbf{TODO})}
+\newcommand{\NOTE}[1]{\marginpar{\footnotesize\textbf{NOTE}} (\textbf{#1})}
+
 \newcommand{\eq}[1]{eq.~\eqref{eq:#1}}
 \newcommand{\eqs}[2]{eqs.~\eqref{eq:#1} and \eqref{eq:#2}}
 \renewcommand{\sec}[1]{section~\ref{sec:#1}}
@@ -62,24 +73,26 @@ The falling slinky is an ideal tool for learning about model building because it
 \section{Introduction}
 
 
-The slinky drop experiment is supercool and suprises even experts who have never
-seen the result before.  This gave us a way to "level the playing field" for
-students with widely varying backgrounds    It has been studied in detail, cite
-some of the references, and we use it as a way to contextualize the model
-building process as we teach the students about models.
+(Describe slinky drop and lack of motion at the bottom briefly.) The slinky drop experiment has been studied in detail, \cite{.}.
+The slinky drop proved to be an interesting and challenging phenomenon and
+was very well suited to teaching the model building process in physics. In this work,
+we seek to describe how we used the slinky drop to give the students first-hand
+experience constructing two different physical models.
 
 This curriculum was developed for an intensive one-week summer program for
-incoming freshmen as a part of the Compasss Project ~\cite{albana2013}. some
-details about compass?  The course was presented in a student-driven classroom
+incoming freshmen as a part of the Compasss Project~\cite{albana2013}. (some
+details about compass?) The course was presented in a student-driven classroom
 where the role of the role of the instructors were to facilitate/guide/provide
 tools...  The important thing here is that the students developed the models
-themselves, and took ownership over them.
+themselves, and took ownership over them.\TODO{Mention somewhere about how the surprising aspects and difficulty
+of the slinky drop gave us a way to ``level the playing field'' for students with widely
+varying backgrounds.}
 
-The cirriculum is built around a central question that the students investigate.
- This central question actually evolves throughout the course of the week as
-student gain understanding and develop a repetoir of scientific tools and
-methods.  The question may start out as "Does the slinky defy gravity?" and end
-up  "How does the bottom of the slinky know when to start falling?"
+% The cirriculum is built around a central question that the students investigate.
+%  This central question actually evolves throughout the course of the week as
+% student gain understanding and develop a repetoir of scientific tools and
+% methods.  The question may start out as "Does the slinky defy gravity?" and end
+% up  "How does the bottom of the slinky know when to start falling?"
 
 During the course of the program, we were able to approach the slinky in two different
 and highly complementary ways. One approach, detailed in \sec{forces}, used forces and Newton's Laws to calculate
@@ -99,7 +112,7 @@ the final conclusion. For this reason, we also made use of a complementary
 model based on information, detailed in \sec{information}. This approach attempted
 to describe the event when the slinky was let go as a piece of information which
 needs to travel to other parts of the system before they are able to respond. We
-used waves the attempt to characterize the speed at which the information travels. 
+used waves to attempt to characterize the speed at which the information travels. 
 As expected, information proved to be a much more sophisticated concept for the
 students to grasp but provided a great deal of insight into the experiment.
 
