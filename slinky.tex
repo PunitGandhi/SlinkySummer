@@ -61,10 +61,10 @@ Berkeley, Berkeley, California 94720, USA}
 \date{\today}
 
 \begin{abstract}
-We describe a curriculum based around the dynamics of a vertically hanging slinky that is released from rest in an equlibrium position.
-The motion, or lack thereof, of the bottom of the slinky serves as a counterintuitive phenomenon that provides context for learning about model building.
+We describe a curriculum based around the dynamics of a slinky hung vertically in equilibrium that is released from rest.
+The motion, or lack thereof, of the bottom of the slinky after the top is released serves as a counterintuitive phenomenon that provides context for learning about scientific model building.
 This set of conceptual activities and hands-on experiments was developed for a week-long summer program for incoming freshmen as a part of the Compass Project~\cite{albana2013}.  
-This summer program is the first part of a three-course sequence aimed at helping students identify themselves as scientists.  
+The summer program is the first part of a three-course sequence aimed at helping incoming students in the physical sciences develop their identity as scientists.  
 This curriculum, in particular, approaches this goal by giving the students the opportunity to actively collaborate in the process of developing models, exploring their limitations, and using this information to iterate on them.  
 The falling slinky is an ideal tool for learning about model building because it allows the students to explore two distinct models that provide complimentary perspectives.
 \end{abstract}
@@ -178,9 +178,9 @@ This stretchiness can be characterized by how much the object stretches
 under it's own weight as it is suspended.   We can define a slinky parameter as a measure of this:
 
 \begin{equation}
-\mathcal{S}=\frac{m g}{k_{eff} L_0 },
+\mathcal{S}=\frac{m g}{k_\text{eff} L_0 },
 \end{equation}
-where $m$ is the total mass of the slinky, $g$ is the gravitational acceleration felt as it is suspended, $k_{eff}$ is 
+where $m$ is the total mass of the slinky, $g$ is the gravitational acceleration felt as it is suspended, $k_\text{eff}$ is 
 the effective spring constant of the entire object, and $L_0$ is the unstretched length.  
 
 Now, in order to see that this parameter is a useful determining the "slinkiness", we can ...
@@ -287,12 +287,16 @@ up questions more efficiently.
 \section{Modeling the slinky using information}
 \label{sec:information}
 \subsection{Motivating waves as information carriers}        
-One of the outcomes of numerical simulation of the masses and spring model is that students realize
-two things. First, that the numerical model has an artifact that causes the bottom mass to stay stationary.
+Coming from the numerical simulation of the masses and springs model, the students realize
+two things. First, the numerical model has an artifact that causes the bottom mass to stay stationary.
 This should be viewed as a systematic problem with the model, and not a prediction of the model.
 Second, when enough time passes so that the bottom mass does move, it initially moves very little compared 
-to the distance the upper masses have moved. One way of interpreting this is that there hasn't been enough
-time for the ``information'' that the top has been dropped to reach the bottom. Initially, the word ``information''
+to the distance the upper masses have moved. At this point it becomes clear that the discrete model
+is not leading the class to a clear solution to the problem of the falling slinky.
+
+By this this, students likely have brough up the wave propertaies of the slinky. One way of moving forward
+is to discuss the idea that there hasn't been enough time for the ``information'' that the top has been 
+dropped to reach the bottom. Initialy, the word ``information''
 may be ill defined for the students.
 
 This motivated a discussion of ``information travel'' in other contexts like earthquakes, tsunamis, 
@@ -300,6 +304,9 @@ sound, or a suspended series of slinkies in the classroom. Students were introdu
 this information that the top of the slinky had been dropped was being carried in a wave to the bottom
 at some speed. Students then investigated properties of waves in small groups. Students investigated the
 effects of amplitude, frequency, tension, and material on wave propagation in slinkies.
+
+This model for the slinky contrasted nicely with the previous model. The students were now thinking about
+the slinky as a continuous object rather than a set of connected parts.
 
 After the experimental activities, students were introduced to the method of dimensional analysis
 to try and derive the speed of a wave on a slinky. They experimentally determined that the wave speed
