@@ -16,6 +16,7 @@
 
 % Draft macros
 \newcommand{\TODO}[1]{\marginpar{\raggedright\scriptsize\textbf{TODO:} #1} (\textbf{TODO})}
+\newcommand{\NOTEMARG}[1]{\marginpar{\raggedright\scriptsize\textbf{NOTE:} #1} (\textbf{NOTE})}
 \newcommand{\NOTE}[1]{\marginpar{\footnotesize\textbf{NOTE}} (\textbf{#1})}
 
 \newcommand{\eq}[1]{eq.~\eqref{eq:#1}}
@@ -232,34 +233,32 @@ m\ddot{x}_3 &= mg + k(x_4 - x_3) - k(x_3 - x_2)
 m\ddot{x}_4 &= mg                - k(x_4 - x_3)
 \,,\end{align}
 %%%
-where $m$ is the mass of each discrete mass, $k$ is the spring constant of each
+\NOTEMARG{CB: include \eq{coupleddes}?}where $m$ is the mass of each discrete mass, $k$ is the spring constant of each
 spring, $x_i$ refers to the absolute position of each mass, and the dots refer to
 derivatives with respect to time.
 
 Doing any serious exploration of these coupled differential equations
 analytically was beyond the level of our audience; however, we briefly allowed
 the students to consider how they would solve the system in order to demonstrate
-the great difficulty of this strategy. We further emphasized the difficulty inherent in
-solving coupled differential equations by showing a coupled pendulum demo where
-one pendulum was suspended from another. The resulting semi-chaotic motion
-showed that we would expect a complicated final answer.
+the great difficulty of this strategy.
 
 Students were gradually led toward an alternative numerical approach to solving
 the problem that divided the evolution of the system into small time
 steps. This was motivated by considering examples like the frames in a
-movie. Discretizing time expanded on our previous decision to approximate the
-system by discretizing the mass in the slinky.
+movie. Discretizing time expanded on our previous decision to discretize the mass
+in the slinky.
 
-A major goal of this part of the curriculum was to show the benefits of
-numerical simulation to solving problems. Not only do numerical approaches
-practically provide a way to make progress solving equations that are difficult
-to work with, but they also often provide a greater degree of transparency and
+A major goal of this part of the curriculum was to show the benefits of building
+numerical models. Not only does a numerical model
+practically provide a way to make progress over an exact model which may be difficult
+to work with, but these models also often provide a greater degree of transparency and
 concreteness into how the system is evolving. We provided the class with the
 ponderous analytical solutions to the 4-body system after the activity and asked
 them how well they could see what was going on compared to the numerical
 approach. We also asked how well they expected each approach to be able to
 handle kinks or bends in the slinky to demonstrate the benefit numerical
-approaches have in handling perturbations.
+approaches have in handling perturbations.\NOTEMARG{CB: This paragraph could be removed.
+It kind of shows two different sub-models of the force-based model: analytical and numerical.}
 
 For the numerical approach, the students were asked to construct an algorithm
 for how to proceed from one time step to the next. With the acceleration at each
@@ -276,23 +275,23 @@ with the time step given by $\Delta t$.
 With the algorithm in hand, we had the students ``simulate'' the masses and
 springs model as a group. Each mass was represented by a group of 
 students, who completed the calculations for their mass to figure out where it would be
-at the next time step. Students were divided into different roles, with some responsible 
-for calculation, others for communicating their position to other groups who 
-needed the information for their own calculations, and others for plotting the results on a graph 
-at the front of the room. The communication of information between groups was intended 
+at the next time step.
+% Students were divided into different roles, with some responsible 
+% for calculation, others for communicating their position to other groups who 
+% needed the information for their own calculations, and others for plotting the results on a graph 
+% at the front of the room.
+Groups needed information from other groups in order to complete their calculations,
+and the communication of information between groups was intended 
 to foreshadow the inherent time delay in the passing of information, explored later in
 the week and described in \sec{information}.
 
-Practical measures were definitely required for this activity to prevent the pace from dragging
-too much. The groups were encouraged to streamline their work by assigning a specific
-role to each person, working in parallel, creating an organized table of values and results,
-etc. One potential problem is that, for an $N$-body simulation and for the algorithm described in \eq{algorithm},
-it will take $2N$ time steps for the bottom mass to move. This is not an explanation for
-the lack of motion in the real slinky but is rather an artifact of the discretization of time:
-the last mass will always wait $2N$ time steps regardless of the size of the step. One way to
-accelerate the activity would be to use a more accurate symplectic algorithm, such as the
-symplectic Euler algorithm (Ref. \ref{...}). This algorithm would require only $N$ steps to move the bottom
-mass, partially alleviating the tedium for the last group.
+% One potential problem is that, for an $N$-body simulation and for the algorithm described in \eq{algorithm},
+% it will take $2N$ time steps for the bottom mass to move. This is not an explanation for
+% the lack of motion in the real slinky but is rather an artifact of the discretization of time:
+% the last mass will always wait $2N$ time steps regardless of the size of the step. One way to
+% accelerate the activity would be to use a more accurate symplectic algorithm, such as the
+% symplectic Euler algorithm (Ref. \ref{...}). This algorithm would require only $N$ steps to move the bottom
+% mass, partially alleviating the tedium for the last group.
 
 The participatory simulation described here provides good practice in building
 a model by iteration. After beginning the activity, questions quickly arise, such
@@ -301,7 +300,7 @@ the masses from passing. The students may wish to allow this to happen as an app
 or they may wish to modify their procedure, perhaps by merging any two masses who have overlaped
 in the most recent time step. Follow up questions for discussion or investigation include
 the dependence of the simulation on the size of the time step, the number of masses,
-and other parameters.
+and other parameters.\NOTE{CB: Could even expand this paragraph if needed.}
 
 It is also possible to perform this activity using a spreadsheet, which allows the steps to be
 calculated much faster, albeit less collaboratively. We had the students implement the algorithm on a spreadsheet once they
