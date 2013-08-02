@@ -324,7 +324,6 @@ up questions more efficiently.
 
 \section{Modeling the slinky using information}
 \label{sec:information}
-\subsection{Motivating waves as information carriers}        
 Coming from the numerical simulation of the masses and springs model, the students realize
 two things. First, the numerical model has an artifact that causes the bottom mass to stay stationary.
 This should be viewed as a systematic problem with the model, and not a prediction of the model.
@@ -333,15 +332,22 @@ Second, when enough time passes so that the bottom mass does move, it initially 
 to the distance the upper masses have moved. At this point it becomes clear that the discrete model
 is not leading the class to a clear solution to the problem of the falling slinky.
 
-By this point, students likely have brough up the wave propertaies of the slinky. One way of moving forward
-is to discuss the idea that there hasn't been enough time for the ``information'' that the top has been 
-dropped to reach the bottom. Initialy, the word ``information''
-may be ill defined for the students.
+\NOTE{\calvin{}{Alternative intro}}In addition to the force-based model, a model based on information avails itself to
+the slinky drop. This model offers a great deal of insight into the phenomenon while
+managing to avoid much of the tedious intermediate calculations of the force-based
+approach. The information approach can be summed up in the following question:
+how does the bottom of the slinky ``know'' that the top has been released? We sought
+to address the fundamental limitation of how fast the information is able to propagate
+down the slinky.
 
-This motivated a discussion of ``information travel'' in other contexts like earthquakes, tsunamis, 
-sound, or a suspended series of slinkies in the classroom. Students were introduced to the idea that
+Initially, using ``information'' in the physics context may seem ill-defined and
+abstract for the students. However, conceptual discussions had already alluded
+unwittingly to what the bottom of the slinky ``knows'', and the wave properties
+of the slinky had been discussed as well. 
+We motivated a discussion of ``information travel'' in other contexts like earthquakes and tsunamis, 
+lightning and thunder, sound, or slinky cows. Students were introduced to the idea that
 this information that the top of the slinky had been dropped was being carried in a wave to the bottom
-at some speed. Students then investigated properties of waves in small groups. Students investigated the
+at some speed.\TODO{\calvin{}{emphasize the connection between the information and the waves}} Students investigated properties of waves, including the
 effects of amplitude, frequency, tension, and material on wave propagation in slinkies.
 
 This model for the slinky contrasted nicely with the previous model. The students were now thinking about
@@ -353,29 +359,30 @@ seemed to be independent of frequency and amplitude, but that it did depend on t
 the slinky was made and the amount of tension placed on the slinkies. The quantities that the students
 had left to work with were tension, $\tau$, and linear density, $\lambda$. Given these two quantities
 the only quantity with units of velocity that can be created is:
+\NOTEMARG{\calvin{}{I would say we scale back the discussion of the dimensional analysis
+because for one, it did not work very well and second, we are not presenting
+anything original here.}}
 \begin{equation}
   \label{eq:wavespeed}
   v=\sqrt{\tfrac{\tau}{\lambda}}
 \end{equation}
-\subsection{Wave propagation versus the collapsing medium}
-The motivating question can be asked more concretely: does the information that the top has been
-dropped arrive at the bottom of the slinky before the slinky collapses. Based on the distribution 
-of density and tension expected in a suspended slinky, the speed of the wave should decrease as
-it travels closer to the bottom of the slinky. On the other hand, the accumulated clump of slinky
-continues to accelerate downward due to gravity and then tension in the slinky. It now seems plausible
+Characterizing the wave speed allowed us to place a concrete limitation on the amount
+of time the information would take to travel from the top to the bottom. The question
+now naturally presents itself of whether the top of a slinky in free fall would fall
+faster or slower than a wave pulse. Based on the distribution 
+of density and tension expected in a suspended slinky, the speed of the wave should decrease significantly as
+it travels closer to the bottom of the slinky. On the other hand, the accumulated clump of slinky in free fall
+continues to accelerate downward due to gravity and the tension in the slinky. It now seems plausible
 that the clump might reach the bottom of the slinky before the wave can propagate to the bottom.
 
-This can be verified experimentally. Two identical slinkies were suspended veritcally. One was attached
-to a short piece of string that would stop it from dropping after the first few centimeters. In this slinky,
-the medium does not collapse and only the wave travels to the bottom. The other was left to free fall. In this
-slinky, the clump would accumulate and fall to the bottom. Using a slow-motion camera, the speed of the wave 
+This can be verified experimentally. Two identical slinkies were suspended veritcally.
+We permanently suspended one slinky and initiated a wave pulse starting at the top.
+In this slinky, the medium does not collapse and only the pulse travels to the bottom. The other slinky was suspended and then dropped from the top. In this
+slinky, a clump would accumulate as the slinky fell to the bottom. Using a slow-motion camera, the speed of the wave pulse
 and the clump can be measured and compared.
 
-
-%the students spend the last couple of days on final projects in groups where
-%they ask new questions or follow up on outsanding questions that we didn't have
-%time for during the week. include a few examples: torsional waves, center of 
-%mass, ...
+\NOTE{\calvin{}{I am in love with the torsional wave and almost can't resist
+mentioning it as a follow up question in this section.}}
 
 \section{Discussion of Two Models}
 \label{sec:discussion}
