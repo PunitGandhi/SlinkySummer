@@ -83,7 +83,7 @@ The sequence of activities we present were developed for a week-long summer prog
 
 \section{Introduction}
 \NOTE{Rework this paragraph. Make sure to discuss about slinky being surprising enough to motivate the students and to ``level the playing field'' and
-simple enough to accommodate widely varying backgrounds.}
+simple enough to accommodate widely varying backgrounds. (Ryan)}
 This curriculum was developed for an intensive one-week summer program for
 incoming freshmen as a part of the Compass Project.~\cite{albana2013,Roth2012,drdf2013a,drdf2013b}
 The course was presented in a student-driven classroom
@@ -95,7 +95,7 @@ many different skills to analyze.
 
 The basis for the curriculum presented in this work is an experiment involving a
 slinky that is hung vertically and released from rest. As the
-slinky falls, the bottommost portion remains at rest and may seem to defy gravity\TODO{Should there be discussion of how we refined our question? Discuss the center of mass ideas we did?} until the remainder of the
+slinky falls, the bottommost portion remains at rest and may seem to defy gravity\TODO{Should there be discussion of how we refined our question? Discuss the center of mass ideas we did? (Jesse)} until the remainder of the
 slinky has fallen down to it.
 The ``slinky drop''\NOTEMARG{Add multi-frame figure with labels.} experiment and other related phenomena have
 been studied in detail,~\cite{calkin1993, newburgh1995, graham2001, aguirregabiria2007,unruh2011, cross2012}
@@ -131,7 +131,7 @@ model individually in \secs{forces}{information}, we compare the models and
 discuss model building in general in \sec{discussion}.
 % Finally, our conclusions are presented in \sec{conclusion}.
 
-\section{Modeling the slinky using forces}
+\section{Modeling the slinky using discrete masses}
 \label{sec:forces}
 
 In this model, we sought to use forces and Newton's Laws to calculate the
@@ -154,11 +154,11 @@ to the suprising behavior of the slinky.
 % We then attempted to solve the equations
 % of motion numerically to find the motion (\subsec{forcesnumeric}).
 
-\subsection{Experimentally testing the simplified model}
+\subsection{Physical realization of the discrete model}
 \label{subsec:forcesexperiment}
 
 \NOTE{Intro by discussing the need to see the extent to which this model
-is applicable. Also reshuffle line below.}
+is applicable. Also reshuffle line below. (Punit)}
 
 We approached this model
 by building a series of discrete masses as described above and taking measurements of
@@ -258,10 +258,12 @@ a good candidate could be the distance the bottom of the model falls in the time
  
 
 
-\subsection{Numerically testing the simplified model}
+\subsection{Numerically testing the discrete model}
 \label{subsec:forcesnumeric}
 
 \NOTE{Add info somewhere about how it is possible to tune parameters with this model}
+
+\NOTE{Make minor revisions (Calvin)}
 
 Having taken the step toward understanding the slinky using a model with
 discrete masses separated by springs, we sought to make further progress by
@@ -358,7 +360,7 @@ up questions more efficiently.
 \section{Modeling the slinky using information}
 \label{sec:information}
 
-\NOTE{Rework intro: start with how the students were starting to talk about information already without realizing it.}
+\NOTE{Rework intro: start with how the students were starting to talk about information already without realizing it. (Calvin)}
 When enough time passes so that the bottom mass does move, it initially moves very little compared 
 to the distance the upper masses have moved. At this point it becomes clear that the discrete model
 is not leading the class to a clear solution to the problem of the falling slinky.
@@ -433,6 +435,10 @@ bottom will still be stationary when the top arrives.
 % required a large number of logical steps and a difficult calculation to arrive at
 % the final conclusion. 
 
+\NOTE{Possible sentenc: Just as we gained insight from looking at different models, we also benefited from
+having students with diverse backgrounds who were able to provide different
+perspectives on the problem.}
+
 The fact that the slinky drop lends itself so naturally to two very different models
 makes it an excellent backdrop for teaching model building. Having explored both
 models, students are able to compare and contrast what kinds of insight are
@@ -440,7 +446,7 @@ offered by each one. Which model seems to apply more directly to the overarching
 question of the ``levitation?'' Which model uses more basic concepts? Which model
 better allows one to see the intermediate evolution of the slinky as it falls?
 The models use different fundamental concepts and rules and approach
-the problem in very different ways, yet obtain the same results.
+the problem in very different ways, yet obtain consistent results.
 
 Students often approach physics assuming that there is a single ``correct'' way
 of looking at a problem. We sought to combat any expectation that we would
@@ -450,12 +456,14 @@ The students constructed a model on their own from basic underlying
 principles, figuring out the best perspective to take, selecting which effects
 to take into account, and determining which approximations to make.
 We then took advantage of the slinky to force the students to attack the problem
-from a different angle. Constructing a different model showed the students
+from a different angle.\TODO{Reword this sentence} Constructing a different model showed the students
 how the set of decisions they made the first time around was not necessarily
 \emph{the} unique way of approaching the problem. Multiple acceptable and potentially
 useful approaches were possible for describing the same phenomenon.
 % \TODO{\calvin{}{Lots of references are warranted in this paragraph.}}
-\TODO{Lots of references are warranted in this paragraph.}
+\TODO{Lots of references are warranted in this paragraph. (Ryan)}
+
+\NOTE{Add paragraph about the process of model building and what is learned there. (Jesse)}
 
 Each model makes different parts of the underlying physics
 more transparent. The details of the interactions between the successive coils
@@ -482,14 +490,25 @@ introduce students to model building and allowed us to highlight many of the
 essential features of model building in science.
 
 
-\acknowledgments The authors would like to acknowledge helpful discussions with
-D. R. Dounas-Frazer and J. Corbo along with the support of the Compass Project
-community.
+\acknowledgments The authors would like to acknowledge the support of the Compass
+Project community and the UC Berkeley instructional support staff along with
+helpful discussions with D. R. Dounas-Frazer and J. Corbo.
+This work was supported by the Departments of Physics, Astronomy, and Earth and
+Planetary Sciences at UC Berkeley and private donations.
 
 \NOTE{Fix person and tense}
+
+\NOTE{We will tend to reference things generically instead of about our students and tend to use present tense instead of past where possible, but in places where it preferrable to do it the other way, it is fine.}
+
 \NOTE{Fix grammar and proofread!}
+
 \NOTE{change ``model-building in science'' to ``physical sciences'' and other similar things}
+
 \NOTE{change references of the top clump being in free fall}
+
+\NOTE{Update paper with terminology: ``slinky drop,'' ``top clump,'' ``wave pulse,'' leave references to the bottom as ``bottom'' if possible}
+
+\NOTE{Change ``force-based'' to ``discrete'' everywhere}
 
 \bibliography{slinky_bibliography}
 
