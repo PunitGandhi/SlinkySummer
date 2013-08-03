@@ -199,12 +199,23 @@ This stretchiness can be characterized by how much the object stretches
 under it's own weight as it is suspended.   We can define a slinky parameter as a measure of this:
 
 \begin{equation}
-\mathcal{S}=\frac{m g}{k_\text{eff} L_0 },
+\mathcal{S}=\frac{L_h-L_0}{L_0}
+%\mathcal{S}=\frac{m g}{k_\text{eff} L_0 },
 \end{equation}
-where $m$ is the total mass of the slinky, $g$ is the gravitational acceleration felt as it is suspended, $k_\text{eff}$ is 
-the effective spring constant of the entire object, and $L_0$ is the unstretched length.  
+where $L$ is the stretched length when hung vertically and allowed to come to rest, and $L_0$ is the unstretched equilibrium length
+when no forces act on it.  It can be shown using Newton's Laws that in the case of the discrete masses and springs model,
+this stretching is actually proportional to the total mass $m$ and inversely proportional to the total effective spring constant $k_{\text{eff}}$ of the object.
+This is also true in the case of a continous model of the slinky that can support the transmission of waves.  The following dimensionless quantity
+can be constructed from the parameters of interest in the problem,
+\begin{equation}
+\mathcal{S'}=\frac{m g}{k_\text{eff} L_0 },
+\end{equation}
+ and is infact proportional to the  slinky parameter defined above.  Here, $m$ is the total mass of the object, $g$ is the gravitational acceleration felt as it is suspended, $k_\text{eff}$ is the effective spring constant of the entire object, and $L_0$ is the unstretched length.  It can be a useful activity to experimentally 
+confirm this proportionality, particularly when the target audience hasn't been previously exposed to Newton's laws.
 
-Now, in order to see that this parameter is a useful determining the "slinkiness", we can ...
+Now, in order to see that this parameter is a useful determining the "slinkiness", we must first choose a measure that allows us to compare how closely a model
+with a given set of parameters behaves like a slinky in the drop experiment.  Since the phenomena of interest is the lack of motion of the bottom of the slinky, 
+a good candidate could be the distance the bottom of the model falls in the time it takes for the model to collapse.  Figure \ref{} shows a plot of this distance, normalized by the stretched length unstretched length amount the object has stretched, for models over a range of different slinky parameters.  The slinky and simulations are also included in this graph.  One can see that the greater the slinky parameter, the less the bottom moves.  (or is there a threshold slinky parameter where  the bottom doesn't move beyond?).  We considered models with 4 masses, and have also shown the positions of the four masses as a function of time.  In order to facilitate comparisons between the models, the positioins have been normalized by the stretched length $L_h$, and the time is measured in units of $\sqrt{m/k_{\text{eff}}}$ of each of model.  
 
 
 Comparing the physical realization of the model to the slinky 
