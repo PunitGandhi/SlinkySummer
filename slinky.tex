@@ -357,11 +357,9 @@ up questions more efficiently.
 
 \section{Modeling the slinky using information}
 \label{sec:information}
-Coming from the numerical simulation of the masses and springs model, the students realize
-two things. First, the numerical model has an artifact that causes the bottom mass to stay stationary.
-This should be viewed as a systematic problem with the model, and not a prediction of the model.
-\NOTEMARG{\calvin{}{I feel like this aspect of the simulation should be glossed over.}}
-Second, when enough time passes so that the bottom mass does move, it initially moves very little compared 
+
+\NOTE{Rework intro: start with how the students were starting to talk about information already without realizing it.}
+When enough time passes so that the bottom mass does move, it initially moves very little compared 
 to the distance the upper masses have moved. At this point it becomes clear that the discrete model
 is not leading the class to a clear solution to the problem of the falling slinky.
 
@@ -384,17 +382,11 @@ at some speed.\TODO{\calvin{}{emphasize the connection between the information a
 effects of amplitude, frequency, tension, and material on wave propagation in slinkies.
 
 This model for the slinky contrasted nicely with the previous model. The students were now thinking about
-the slinky as a continuous object rather than a set of connected parts.
+the slinky as a continuous object rather than a set of connected parts.\TODO{Move this paragraph to discussion}
 
-After the experimental activities, students were introduced to the method of dimensional analysis
-to try and derive the speed of a wave on a slinky. They experimentally determined that the wave speed
-seemed to be independent of frequency and amplitude, but that it did depend on the material from which
-the slinky was made and the amount of tension placed on the slinkies. The quantities that the students
-had left to work with were tension, $\tau$, and linear density, $\lambda$. Given these two quantities
-the only quantity with units of velocity that can be created is:
-\NOTEMARG{\calvin{}{I would say we scale back the discussion of the dimensional analysis
-because for one, it did not work very well and second, we are not presenting
-anything original here.}}
+Students were able to experimentally determine that the wave speed depended on the 
+tension, $\tau$, and the linear density, $\lambda$, in a way consistent with the
+usual expression,\footnote{torsional wave\ldots}
 \begin{equation}
   \label{eq:wavespeed}
   v=\sqrt{\tfrac{\tau}{\lambda}}
@@ -404,14 +396,14 @@ of time the information would take to travel from the top to the bottom. The que
 now naturally presents itself of whether the top of a slinky in free fall would fall
 faster or slower than a wave pulse. Based on the distribution 
 of density and tension expected in a suspended slinky, the speed of the wave should decrease significantly as
-it travels closer to the bottom of the slinky. On the other hand, the accumulated clump of slinky in free fall
-continues to accelerate downward due to gravity and the tension in the slinky. It now seems plausible
+it travels closer to the bottom of the slinky. This is to be compared with the
+accumulated clump of slinky as it falls. It now seems plausible
 that the clump might reach the bottom of the slinky before the wave can propagate to the bottom.
 
 This can be verified experimentally. Two identical slinkies were suspended veritcally.
 We permanently suspended one slinky and initiated a wave pulse starting at the top.
 In this slinky, the medium does not collapse and only the pulse travels to the bottom. The other slinky was suspended and then dropped from the top. In this
-slinky, a clump would accumulate as the slinky fell to the bottom. Using a slow-motion camera, the speed of the wave pulse
+slinky, a clump would accumulate as the slinky fell to the bottom. Using a slow-motion camera, the trajectory of the wave pulse
 and the clump can be measured and compared.
 
 \begin{figure*}[t!]
@@ -426,15 +418,12 @@ of the top of an identical slinky when in free fall as a function of time.}
 
 The results of the measurements are shown in \fig{clumppulse}. These measurements
 make clear that the falling top clump moves faster than a wave pulse on the same
-slinky would. In a sense, the information-carrying wave pulse is being swallowed
-by the slinky as it falls. We see this as the most natural way of understanding the
+slinky would. This becomes a very intuitive way of understanding the
 slinky drop. First, we understand that information travels at finite speed and so
 the news of the release of the slinky will take time to propagate down the slinky.
-Second, upon comparing the relevant constraints on the information travel for this
-system, we find that the falling slinky exceeds this speed. This explains why the
+Second, we find that the collapse of the medium exceeds the speed at which
+the wave pulse is capable of carrying the information. This explains why the
 bottom will still be stationary when the top arrives.
-
-\NOTE{\calvin{}{I am in love with the torsional wave and almost can't resist mentioning it as a follow up question in this section.}}
 
 \section{Discussion of Two Models}
 \label{sec:discussion}
@@ -500,6 +489,7 @@ community.
 \NOTE{Fix person and tense}
 \NOTE{Fix grammar and proofread!}
 \NOTE{change ``model-building in science'' to ``physical sciences'' and other similar things}
+\NOTE{change references of the top clump being in free fall}
 
 \bibliography{slinky_bibliography}
 
