@@ -7,6 +7,7 @@
 \usepackage{amssymb}
 \usepackage[margin=1in]{geometry}
 \usepackage{dcolumn}
+\usepackage{multirow}
 
 % TODO: remove these lines, which expand the margins (useful for comments)
 \textwidth  .72\paperwidth
@@ -165,19 +166,12 @@ of motion numerically to find the motion (\subsec{forcesnumeric}).
 \label{subsec:forcesexperiment}
 
 The simplified model of discrete masses connected by springs provides a path forward using
-<<<<<<< HEAD
 only introductory-level Newtonian mechanics.  While the physics of this model 
 is readily approachable, the math required to analyze the model quickly spirals out of 
 the regime of a pencil-and-paper calculation as the number of discrete masses used to model 
-the slinky increases.  
+the slinky increases. \TODO{\calvin{}{Repetitive from above.}}
 \TODO{Add info about how it is possible to tune parameters with this model}
-=======
-only an introductory level of Newtonian mechanics.  While the physics of this model 
-is readily approachable, the math required to analyze the model quickly spirals out of 
-the regime of a pencil-and-paper calculation as the number of discrete masses used to model 
-the slinky increases.  \TODO{\calvin{}{Repetitive from above.}}
 
->>>>>>> 22e29bc6c4efd4f4f391e530bcf32708d35376d7
 %Can the this simplified model based on physics that we understand actually explain a phenomenon
 %in which the very physics in the model seems to be defied?
 
@@ -194,6 +188,38 @@ gave students some insight into the physical properties of the slinky that allow
 stationary when the top was released.  In particular, the students realized that the models must be very "stretchy"
 in order to for this phenomenon to happen.  The students further realized how extremely stretchy the slinky is 
 relative to other objects.
+
+\newcolumntype{V}{>{\centering\arraybackslash} m{.4\linewidth} }
+\begin{figure*}[t!]
+  \centering
+
+  \begin{tabular}{cccc}
+    \multicolumn{2}{c}{
+      \multirow{2}{*}{
+        \raisebox{0\height}[0.6\height]{
+          \includegraphics[width=0.5\textwidth]{figs/SlinkyParameter}
+        }
+      }
+    } &
+    \includegraphics[width=0.25\textwidth]{figs/Slinky3} &
+    \includegraphics[width=0.25\textwidth]{figs/Slinky6} \\
+    \multicolumn{2}{c}{} &
+    \includegraphics[width=0.25\textwidth]{figs/SlinkyTabs} &
+    \includegraphics[width=0.25\textwidth]{figs/SlinkySim} \\
+
+  \end{tabular}
+
+  \caption{The left panel shows the correlation of the slinkiness parameter with
+           how stationary the bottom mass is. Specifically, the extent to which the
+           bottom mass is stationary is measured as the distance the bottom mass falls
+           reletive to the stretched length of the system, during the time in which
+           the top mass falls the full stretched length. The set of figures in the
+           right panel shows the position as a function of time of four positions
+           on the system. The top left is Model 3, the top right is 4 masses connected
+           by strings, the bottom left is the slinky, and the bottom right is a
+           simulation of Model ?.}
+  \label{fig:discretemodel}
+\end{figure*}
 
 This stretchiness can be characterized by how much the object stretches
 under it's own weight as it is suspended.   We can define a slinky parameter as a measure of this:
