@@ -1,4 +1,10 @@
-\documentclass[prb,preprint]{revtex4-1} 
+% A Tale of Two Slinkies: Learning about Model Building in a Student Driven Classroom
+%
+% Calvin Berggren, Punit Gandhi, Jesse Livezey, Ryan Olf
+%
+% 2013-08-??: v1
+%
+\documentclass[prb,preprint,superscriptaddress]{revtex4-1} 
 
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -56,17 +62,19 @@
 
 \begin{document}
 
-\title{A tale of two slinkies: learning about model building in a student driven classroom }
+\title{A Tale of Two Slinkies: Learning about Model Building in a Student Driven Classroom}
 \author{Calvin Berggren}
 \email{calvin1414@berkeley.edu}
+\affiliation{Department of Physics, University of California at Berkeley, Berkeley, CA 94720, USA}
+\affiliation{Berkeley Center for Theoretical Physics, University of California at Berkeley, Berkeley, CA 94720, USA}
+\affiliation{Theoretical Physics Group, Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA}
 \author{Punit  Gandhi}
 \email{punit\_gandhi@berkeley.edu}
 \author{Jesse Livezey}
 \email{jesse.livezey@berkeley.edu}
 \author{Ryan Olf}
 \email{ryanolf@berkeley.edu}
-\affiliation{Department of Physics, University of California at
-Berkeley, Berkeley, California 94720, USA}
+\affiliation{Department of Physics, University of California at Berkeley, Berkeley, CA 94720, USA}
 \date{\today}
 
 \begin{abstract}
@@ -96,10 +104,11 @@ many different skills to analyze.
 The basis for the curriculum presented in this work is an experiment involving a
 slinky that is hung vertically and released from rest. As the
 slinky falls, the bottommost portion remains at rest and may seem to defy gravity until the remainder of the
-slinky has fallen down to it.
+slinky has fallen down to it. 
 \footnote{Another interesting avenue of analyzing the slinky drop but which is beyond the scope of the present
 work is to compare to motion of the slinky's center of mass to free fall. We confine ourselves here to
 addressing the lack of motion of the bottommost potion of the slinky.}
+The effect is most clearly seen using a slow-motion camera.
 The ``slinky drop''\NOTEMARG{Add multi-frame figure with labels. (Jesse)} experiment and other related phenomena have
 been studied in detail,~\cite{calkin1993, newburgh1995, graham2001, aguirregabiria2007,unruh2011, cross2012}
 and the recent flurry of interest in the slinky online \cite{..}
@@ -262,28 +271,17 @@ a good candidate could be the distance the bottom of the model falls in the time
 \subsection{Numerically testing the discrete model}
 \label{subsec:forcesnumeric}
 
-\NOTE{Add info somewhere about how it is possible to tune parameters with this model}
-
-\NOTE{Make minor revisions (Calvin)}
-
 Having taken the step toward understanding the slinky using a model with
 discrete masses separated by springs, we sought to make further progress by
 solving this model numerically. The students spent some time constructing the
-force equations for an $N=4$ system, which are
+force equations for an $N=4$ system, for example,
 %%%
 \begin{align} \label{eq:coupleddes}
-m\ddot{x}_1 &= mg + k(x_2 - x_1)\,,
-\nn\\
-m\ddot{x}_2 &= mg + k(x_3 - x_2) - k(x_2 - x_1)
-\,,\nn\\
-m\ddot{x}_3 &= mg + k(x_4 - x_3) - k(x_3 - x_2)
-\,,\nn\\
-m\ddot{x}_4 &= mg                - k(x_4 - x_3)
+ma_i &= mg + k(x_{i+1} - x_i) - k(x_i - x_{i-1})
 \,,\end{align}
 %%%
-\NOTEMARG{\calvin{}{include \eq{coupleddes}?}}where $m$ is the mass of each discrete mass, $k$ is the spring constant of each
-spring, $x_i$ refers to the absolute position of each mass, and the dots refer to
-derivatives with respect to time.
+where $m$ is the mass of each discrete mass, $k$ is the spring constant of each
+spring, and $x_i$ and $a_i$ refer to the absolute position and acceleration of each mass.
 
 Doing any serious exploration of these coupled differential equations
 analytically was beyond the level of our audience; however, we briefly allowed
@@ -293,24 +291,14 @@ the great difficulty of this strategy.
 Students were gradually led toward an alternative numerical approach to solving
 the problem that divided the evolution of the system into small time
 steps. This was motivated by considering examples like the frames in a
-movie\TODO{slow mo here and at the intro}. Discretizing time expanded on our previous decision to discretize the mass
+movie, such as the slow-motion movies we used to view the slinky. Discretizing time expanded on our previous decision to discretize the mass
 in the slinky.
 
-A major goal of this part of the curriculum was to show the benefits of building
-numerical models. Not only does a numerical model
-practically provide a way to make progress over an exact model which may be difficult
-to work with, but these models also often provide a greater degree of transparency and
-concreteness into how the system is evolving. We provided the class with the
-ponderous analytical solutions to the 4-body system after the activity and asked
-them how well they could see what was going on compared to the numerical
-approach. We also asked how well they expected each approach to be able to
-handle kinks or bends in the slinky to demonstrate the benefit numerical
-approaches have in handling perturbations.\TODO{move below}
-
-For the numerical approach, the students were asked to construct an algorithm
+The students were asked to construct an algorithm
 for how to proceed from one time step to the next. With the acceleration at each
 step given by the force as in \eq{coupleddes}, the students settled on the
 following simple algorithm (also known as the Euler method (Ref. \ref{..})),
+\TODO{find textbook reference for Euler method}
 %%%
 \begin{align} \label{eq:algorithm}
 v_i(t+\Delta t) &= v_i(t) + a_i(t)\Delta t
@@ -327,31 +315,43 @@ at the next time step.
 % for calculation, others for communicating their position to other groups who 
 % needed the information for their own calculations, and others for plotting the results on a graph 
 % at the front of the room.
-They would also plot their position on the board allowing the whole class to track
+They would also plot their position on the main chalkboard allowing the whole class to track
 the progress of the simulation.
 Groups needed information from other groups in order to complete their calculations,
 and the communication of information between groups was intended 
 to foreshadow the inherent time delay in the passing of information, explored later in
 the week and described in \sec{information}.
 
-One potential problem is that, for an $N$-body simulation and for the algorithm described in \eq{algorithm},
+The participatory simulation described here provides good practice in building
+a model by iteration and highlights the ability of the numerical approach to incorporate changes to the model. After beginning the activity, questions quickly arise, such
+as what to do when a mass passes through another mass. Nothing in the set of equations from \eq{coupleddes} prevents
+the masses from passing. The students may wish to allow this to happen as an approximation
+or they may wish to modify their procedure, perhaps by somehow merging any two masses which have overlaped
+in the most recent time step. Follow up questions for discussion or investigation include
+the dependence of the simulation on the size of the time step and the number of masses.
+In building a simplified model, it also becomes easy to investigate
+other situations by adjusting parameters.
+
+A major goal of this part of the curriculum was to show the benefits of building
+numerical models. Not only does a numerical model
+practically provide a way to make progress over an exact model which may be difficult
+to work with, but these models also often provide a greater degree of transparency and
+concreteness into how the system is evolving. We provided the class with the
+ponderous analytical solutions to the 4-body system after the activity and asked
+them how well they could see what was going on compared to the numerical
+approach. We also asked how well they expected each approach to be able to
+handle kinks or bends in the slinky to demonstrate the benefit numerical
+approaches have in handling perturbations.
+
+One potential obstacle with the numerical simulation is that, for an $N$-body simulation and for the algorithm described in \eq{algorithm},
 it will take $2N$ time steps for the bottom mass to move. This is not an explanation for
 the lack of motion in the real slinky but is rather an artifact of the discretization of time:
 the last mass will always wait $2N$ time steps regardless of the size of the step.
-This provides an opportunity to discuss one limitation of this model.\TODO{more below}
+This provides an opportunity to discuss one limitation of this model.
 % One way to
 % accelerate the activity would be to use a more accurate symplectic algorithm, such as the
 % symplectic Euler algorithm (Ref. \ref{...}). This algorithm would require only $N$ steps to move the bottom
 % mass, partially alleviating the tedium for the last group.
-
-The participatory simulation described here provides good practice in building
-a model by iteration and highlights the ability of the numerical approach to incorporate changes to the model. After beginning the activity, questions quickly arise, such
-as what to do when a mass passes through another mass. Nothing in \eq{coupleddes} prevents
-the masses from passing. The students may wish to allow this to happen as an approximation
-or they may wish to modify their procedure, perhaps by somehow merging any two masses which have overlaped
-in the most recent time step. Follow up questions for discussion or investigation include
-the dependence of the simulation on the size of the time step, the number of masses,
-and other parameters.
 
 It is also possible to perform this activity using a spreadsheet, which allows the steps to be
 calculated much faster, albeit less collaboratively. We had the students implement the algorithm on a spreadsheet once they
@@ -459,7 +459,6 @@ comfortable boundaries.
 The students constructed a model on their own from basic underlying
 principles, figuring out different perspectives that could be taken, selecting which effects
 to take into account, and determining which approximations to make.
-% \TODO{\calvin{}{Lots of references are warranted in this paragraph.}}
 \TODO{Lots of references are warranted in this paragraph. (Ryan)}
 
 \NOTE{Add paragraph about the process of model building and what is learned there. (Jesse)}
