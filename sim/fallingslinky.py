@@ -2,11 +2,12 @@ from __future__ import division
 import numpy as np
 import matplotlib.pyplot as plt
 def main():
-    saveFile = 'slinkySim.csv'
-    unLength = .3
-    length = 1.3
-    totMass = .21
-    nMasses = 4
+    saveFile = 'heavytop.csv'
+    #M02082013/slinkym200l027_5r1ct.csv'
+    unLength = .075
+    length = unLength*20.
+    totMass = .200
+    nMasses = 100
     collisions = True 
     g = 9.8
     dt = .0002
@@ -17,6 +18,7 @@ def main():
     m = totMass/nMasses
     k = (nMasses-1)*nMasses*m*g/(2*(length-unLength))
     masses = np.array([m for ii in xrange(nMasses)])
+    masses[0] = 100*masses[0]
     collapsed = [False for ii in xrange(nMasses)]
     y = np.zeros((nIter+1,nMasses))
     v = np.zeros_like(y)
@@ -71,11 +73,13 @@ def main():
     axy = plt.subplot2grid((2,2),(0,0),colspan=2)
     axy.plot(*yplots)
     plt.ylabel('Height')
+    plt.title(saveFile[10:-4])
     axv = plt.subplot2grid((2,2),(1,0),colspan=2)
     plt.plot(*vplots)
     plt.ylabel('Velocity')
     plt.xlabel('Time')
-    plt.show()
+    #plt.show()
+    plt.savefig(saveFile[:-3]+'png')
 
 if __name__ == '__main__':
     main()
