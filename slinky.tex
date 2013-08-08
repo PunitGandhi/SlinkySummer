@@ -14,6 +14,8 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{dcolumn}
 \usepackage{multirow}
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,decorations.pathmorphing,decorations.markings}
 
 % TODO: remove these lines, which expand the margins (useful for comments)
 \textwidth  .72\paperwidth
@@ -145,6 +147,33 @@ discuss model building in general in \sec{discussion}.
 
 \section{Modeling the slinky using discrete masses}
 \label{sec:forces}
+
+\begin{figure*}[t]
+\centering
+
+\begin{tikzpicture}[every node/.style={draw,outer sep=0pt,thick}]
+\tikzstyle{mass}=[minimum width=1.5cm,minimum height=0.75cm,anchor=north]
+\tikzstyle{spring}=[thick,decorate,decoration={zigzag,pre length=0.1cm,post length=0.1cm}]
+
+\node (M1) [mass] {$m$};
+
+\node (M2) at (M1.south) [mass,yshift=-1.5cm] {$m$};
+\draw [spring,decoration={segment length=9}]
+   (M2.north) -- ($(M1.south east)!(M2.north)!(M1.south west)$);
+
+\node (M3) at (M2.south) [mass,yshift=-1cm] {$m$};
+\draw [spring,decoration={segment length=6}]
+   (M3.north) -- ($(M2.south east)!(M3.north)!(M2.south west)$);
+
+\node (M4) at (M3.south) [mass,yshift=-0.5cm] {$m$};
+\draw [spring,decoration={segment length=3}]
+   (M4.north) -- ($(M3.south east)!(M4.north)!(M3.south west)$);
+
+\end{tikzpicture}
+
+\caption{A model of the slinky using discrete masses connected by springs.}
+\label{fig:discrete}
+\end{figure*}
 
 In this model, we sought to use forces and Newton's Laws to calculate the
 motion of the slinky. In order to make this brute-force approach more tractable, we
