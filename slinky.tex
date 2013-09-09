@@ -101,23 +101,22 @@ The slinky drop experiment and other related phenomena have
 been studied in detail\cite{calkin1993, newburgh1995, graham2001, aguirregabiria2007,unruh2011, cross2012}
 and have recently attracted a flurry of interest online \cite{..}.
 In this work, we describe how we used the slinky drop phenomenon to teach the modeling process by giving
- the students first-hand experience constructing two different physical models.
+ the students first-hand experience constructing two distinct but complementary physical models.
 
 This curriculum was developed for an intensive one-week summer course for
 incoming freshmen as a part of the Compass Project~\cite{albana2013,Roth2012,drdf2013a,drdf2013b} and was
 presented in a student-driven classroom inspired by Modeling Instruction\cite{hestenes1987}.
-Students in the class shared a common interest in the physical sciences but came from diverse backgrounds with widely varying levels of preparation. In spite of this, it was important that all students be able to contribute to and take ownership of the models developed in the course. The slinky drop phenomenon strikes a delicate balance between competing pedagogical needs. The setup is simple enough that even less prepared students have (incorrect) intuition for what should happen, and can therefore be surprised by the observed (contradictory) result, which motivates further exploration. On the other hand, a satisfactory intuitive %(let alone quantitative) 
+Students in the class shared a common interest in the physical sciences but came from diverse backgrounds with widely varying levels of preparation. In spite of this, it was important that all students be able to contribute to and take ownership of the models developed in the course. The slinky drop phenomenon strikes a delicate balance between competing pedagogical needs. The setup is simple enough that even less prepared students have (incorrect) intuition for what should happen, and can therefore be surprised by the observed (contradictory) result, which engages the students interest and motivates further exploration. On the other hand, a satisfactory intuitive %(let alone quantitative) 
 understanding of the phenomenon is both a) attainable to a wide range of students and b) sufficiently challenging that such students can begin their exploration on a relatively level playing field, facilitating collaboration and shared learning.
 
-During the course of the program, we approached the slinky drop problem using two different
-and  complementary models.
-One approach, detailed in \sec{forces}, approximated
-the slinky as a number of discrete masses connected by simple springs and used
+During the course of the program, students approached the slinky drop problem using two complementary models.
+In one approach, detailed in \sec{forces}, students approximate
+the slinky as a number of discrete masses connected by simple springs and applied
  Newton's Laws to calculate the motion of these masses.
-The second, complementary
-model was based on the propagation of information, detailed in \sec{information}. This approach
-described the event when the slinky was released as a piece of information that
-needed to travel to other parts of the system before they would be able to respond.
+In the second, complementary
+approach, students model the propagation of information, as detailed in \sec{information}. This model
+describes the event when the slinky is released as a piece of information that
+needs to travel to other parts of the system---via either a wave pulse or the shock wave of medium collapse---before they are able to respond.
 Information initially proved to be a more challenging concept for the
 students to grasp but ultimately provided a clearer, more intuitive way of understanding why the bottom
 remains stationary. After presenting each
@@ -155,17 +154,17 @@ discuss model building in general in \sec{discussion}.
 \label{fig:discrete}
 \end{figure*}
 
-In this model (the ``discrete model''), we sought to use forces and Newton's Laws to calculate the
-motion of the slinky. In order to make this brute-force approach more tractable, we
-modeled the slinky as a series of discrete masses connected by simple springs, as
-shown in \fig{discrete}. This
-model was conceptually very straightforward and allowed the students to follow an
-intuitive reductionist approach where they could divide the slinky into individual
-constituents. Students were then able to apply familiar concepts in deciding how to model each part. Although the model turned out to
-be formidable to solve for a nontrivial number of masses, it was still highly beneficial as it was restricted to the
-use of elementary physical concepts, which built up into a larger, more interesting
-phenomenon. Students were able to see how the different parts interacted and led
-to the suprising behavior of the slinky.
+In this model (the ``discrete model''), students use forces and Newton's Laws to calculate the
+motion of the slinky in free fall. This
+model is conceptually straightforward and allows students to follow a
+reductionist approach wherein they divide the slinky into intuitively and mathematically accessible
+constituents. In particular, students break the model slinky into a series of discrete masses connected by simple springs,
+as shown in \fig{discrete}.
+Students then apply familiar concepts in deciding how to model each part. The equations of motion that result from this simple model are quite difficult to solve analytically for slinkys composed of more than a few masses, but the model is still very useful in understanding the slinky drop, in particular, and model building, in general. 
+
+In developing this model, students face many choices regarding approximations and simplifications. Which choices that render the mathematics more tractable, such as choosing to model only a few masses, yield a system that reproduces ``levitation'' phenomenon? What roles do the various parameters of the model---number, mass, spring constant---play in reproducing the relevant qualities of a slinky? To answer these questions, and to glean insight into the slinky drop, the students explore the model in two complementary ways: In section \ref{subsec:forcesexperiment} they build and study a physical approximation of the discrete system, while in section \ref{subsec:forcesnumeric} they numerically evolve the derived equations of motion.
+
+
 
 % The strategy  was to find the forces (gravity and elastic) acting on 
 % each mass as a function of position and then
