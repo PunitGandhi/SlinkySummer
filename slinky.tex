@@ -105,7 +105,7 @@ In this work, we describe how we used the slinky drop phenomenon to teach the mo
 
 This curriculum was developed for an intensive one-week summer course for
 incoming freshmen as a part of the Compass Project~\cite{albana2013,Roth2012,drdf2013a,drdf2013b} and was
-presented in a student-driven classroom inspired by Modeling Instruction\cite{hestenes1987}.
+presented in a student-driven classroom that blends several proven inquiry- and discovery-based strategies, such as \emph{Complex Instruction}~\cite{Cohen1997}, \emph{Constructionism}~\cite{Papert1991}, and \emph{Modeling Discourse Management}~\cite{Desbien2002} (a precurser to \emph{Modeling Instruction}~\cite{Brewe2008}).
 Students in the class shared a common interest in the physical sciences but came from diverse backgrounds with widely varying levels of preparation. In spite of this, it was important that all students be able to contribute to and take ownership of the models developed in the course. The slinky drop phenomenon strikes a delicate balance between competing pedagogical needs. The setup is simple enough that even less prepared students have (incorrect) intuition for what should happen, and can therefore be surprised by the observed (contradictory) result, which engages the students interest and motivates further exploration. On the other hand, a satisfactory intuitive %(let alone quantitative) 
 understanding of the phenomenon is both a) attainable to a wide range of students and b) sufficiently challenging that such students can begin their exploration on a relatively level playing field, facilitating collaboration and shared learning.
 
@@ -113,7 +113,7 @@ During the course of the program, students approached the slinky drop problem us
 In one approach, detailed in \sec{forces}, students approximate
 the slinky as a number of discrete masses connected by simple springs and applied
  Newton's Laws to calculate the motion of these masses.
-In the second, complementary
+In the second
 approach, students model the propagation of information, as detailed in \sec{information}. This model
 describes the event when the slinky is released as a piece of information that
 needs to travel to other parts of the system---via either a wave pulse or the shock wave of medium collapse---before they are able to respond.
@@ -121,7 +121,7 @@ Information initially proved to be a more challenging concept for the
 students to grasp but ultimately provided a clearer, more intuitive way of understanding why the bottom
 remains stationary. After presenting each
 model individually in \secs{forces}{information}, we compare the models and
-discuss model building in general in \sec{discussion}.
+discuss the benifits of this curriculum as a vehicle for learning about model building in \sec{discussion}.
 % Finally, our conclusions are presented in \sec{conclusion}.
 
 \section{Modeling the slinky using discrete masses}
@@ -162,7 +162,9 @@ constituents. In particular, students break the model slinky into a series of di
 as shown in \fig{discrete}.
 Students can then apply familiar concepts in deciding how to model each part. The equations of motion that result from this simple model are quite difficult to solve analytically for slinkys composed of more than a few masses, but the model is still very useful in understanding the slinky drop in particular, and model building in general. 
 
-In developing this model, students face many choices regarding approximations and simplifications. Which choices that render the mathematics more tractable, such as choosing to model only a few masses, yield a system that reproduces ``levitation'' phenomenon? What roles do the various parameters of the model---number, mass, spring constant---play in reproducing the relevant qualities of a slinky? To answer these questions, and to glean insight into the slinky drop, the students explore the model in two complementary ways: In section \ref{subsec:forcesexperiment} they build and study a physical approximation of the discrete system, while in section \ref{subsec:forcesnumeric} they numerically evolve the derived equations of motion.
+In developing this model, students face many choices regarding approximations and simplifications. Which choices that render the mathematics more tractable, such as choosing to model only a few masses, yield a system that reproduces ``levitation'' phenomenon? What roles do the various parameters of the model---number, mass, spring constant---play in reproducing the relevant qualities of a slinky? To answer these questions, and to glean insight into the slinky drop, the students explore the model in two complementary ways: In section \ref{subsec:forcesexperiment} they build a physical approximation of the discrete system in order to experimentally explore the model, while in section \ref{subsec:forcesnumeric} they numerically evolve the derived equations of motion.  
+
+%The experimental approach has the freedom to explore the model  whereas the numerical approach avoids the engineering constraints and exerimental uncertainty.
 
 
 % The strategy  was to find the forces (gravity and elastic) acting on 
@@ -176,7 +178,7 @@ In developing this model, students face many choices regarding approximations an
 \subsection{Physical realization of the discrete model}
 \label{subsec:forcesexperiment}
 
-In order to be useful for understanding the the slinky drop, the discrete model needs to be able to reproduce the essential physics of the slinky. To learn about the applicability and limitations of the discrete model, and the implications of the various choices involved in defining it, the students built physical realizations of the model using masses (washers, nuts) tied to springs (rubber bands, stretchy silicone).  The motion of physical models built using different parameters were compared and contrasted with each other and the motion of the actual slinky.  Example physical models are show in examples are shown in \ref{fig:students}.  
+In order to be useful for understanding the the slinky drop, the discrete model attempts to reproduce the essential physics of the slinky. To learn about the applicability and limitations of the discrete model, and the implications of the various choices involved in defining it, the students built physical realizations of the model using masses (washers, nuts) tied to springs (rubber bands, stretchy silicone).  The motion of physical models built using different parameters were compared and contrasted with each other and the motion of the actual slinky.  Example physical models are show in examples are shown in \ref{fig:students}.  
 
 The primary focus of student investigation is whether, and under what circumstances, the physical mass and spring models demonstrate the levitation effect that they seek to understand.  To do this, students build many models with different masses and springs and note the manner in which they drop, as recorded by a high speed camera. From these observations, the students learn which physical properties of the slinky allow for the bottom to remain stationary when the top was released.  In particular, the students realize that the models must be very "stretchy" in order to for this phenomenon to be pronounced.  Further, the students begin to appreciate how extremely stretchy the slinky is relative to other objects.
 
@@ -394,7 +396,7 @@ faster or slower than a wave pulse. Based on the distribution
 of density and tension expected in a suspended slinky, the speed of the wave should decrease significantly as
 it travels closer to the bottom of the slinky. This is to be compared with the
 accumulated clump of slinky as it falls. It now seems plausible
-that the clump might reach the bottom of the slinky before the wave can propagate to the bottom.
+that the clump might reach the bottom of the slinky before the wave can propagate to the bottom. \footnote{Indeed, a shock front analysis of a continuum model of the slinky (e.g. ~\cite{Unruh2011}) can be used to quantify the supersonic speed for the clump as a function of time as it travels to the bottom of the slinky.} 
 
 This can be verified experimentally. Two identical slinkies were suspended veritcally.
 We permanently suspended one slinky and initiated a wave pulse starting at the top.
