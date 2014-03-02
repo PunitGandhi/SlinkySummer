@@ -105,7 +105,7 @@ In this work, we describe how we used the slinky drop phenomenon to teach the mo
 
 This curriculum was developed for an intensive one-week summer course for
 incoming freshmen as a part of the Compass Project~\cite{albana2013,Roth2012,drdf2013a,drdf2013b} and was
-presented in a student-driven classroom inspired by Modeling Instruction\cite{hestenes1987}.
+presented in a student-driven classroom that blends several proven inquiry- and discovery-based strategies, such as \emph{Complex Instruction}~\cite{Cohen1997}, \emph{Constructionism}~\cite{Papert1991}, and \emph{Modeling Discourse Management}~\cite{Desbien2002} (a precursor to \emph{Modeling Instruction}~\cite{Brewe2008}).
 Students in the class shared a common interest in the physical sciences but came from diverse backgrounds with widely varying levels of preparation. In spite of this, it was important that all students be able to contribute to and take ownership of the models developed in the course. The slinky drop phenomenon strikes a delicate balance between competing pedagogical needs. The setup is simple enough that even less prepared students have (incorrect) intuition for what should happen, and can therefore be surprised by the observed (contradictory) result, which engages the students interest and motivates further exploration. On the other hand, a satisfactory intuitive %(let alone quantitative) 
 understanding of the phenomenon is both a) attainable to a wide range of students and b) sufficiently challenging that such students can begin their exploration on a relatively level playing field, facilitating collaboration and shared learning.
 
@@ -113,7 +113,7 @@ During the course of the program, students approached the slinky drop problem us
 In one approach, detailed in \sec{forces}, students approximate
 the slinky as a number of discrete masses connected by simple springs and applied
  Newton's Laws to calculate the motion of these masses.
-In the second, complementary
+In the second
 approach, students model the propagation of information, as detailed in \sec{information}. This model
 describes the event when the slinky is released as a piece of information that
 needs to travel to other parts of the system---via either a wave pulse or the shock wave of medium collapse---before they are able to respond.
@@ -121,7 +121,7 @@ Information initially proved to be a more challenging concept for the
 students to grasp but ultimately provided a clearer, more intuitive way of understanding why the bottom
 remains stationary. After presenting each
 model individually in \secs{forces}{information}, we compare the models and
-discuss model building in general in \sec{discussion}.
+discuss the benefits of this curriculum as a vehicle for learning about model building in \sec{discussion}.
 % Finally, our conclusions are presented in \sec{conclusion}.
 
 \section{Modeling the slinky using discrete masses}
@@ -160,7 +160,7 @@ model is conceptually straightforward and allows students to follow a
 reductionist approach wherein they divide the slinky into intuitively and mathematically accessible
 constituents. In particular, students break the model slinky into a series of discrete masses connected by simple springs,
 as shown in \fig{discrete}.
-Students can then apply familiar concepts in deciding how to model each part. The equations of motion that result from this simple model are quite difficult to solve analytically for slinkys composed of more than a few masses, but the model is still very useful in understanding the slinky drop in particular, and model building in general. 
+Students can then apply familiar concepts in deciding how to model each part. The equations of motion that result from this simple model are quite difficult to solve analytically for slinkies composed of more than a few masses, but the model is still very useful in understanding the slinky drop in particular, and model building in general. 
 
 In developing this model, students face many choices regarding approximations and simplifications. Which choices that render the mathematics more tractable, such as choosing to model only a few masses, yield a system that reproduces the ``levitation'' phenomenon? What roles do the various parameters of the model---number, mass, spring constant---play in reproducing the relevant qualities of a slinky? To answer these questions, and to glean insight into the slinky drop, students can explore the model in two complementary ways: In section \ref{subsec:forcesexperiment} they build and study a physical approximation of the discrete system, while in section \ref{subsec:forcesnumeric} they numerically evolve the derived equations of motion.
 
@@ -176,7 +176,7 @@ In developing this model, students face many choices regarding approximations an
 \subsection{Physical realization of the discrete model}
 \label{subsec:forcesexperiment}
 
-In order to be useful for understanding the the slinky drop, the discrete model needs to be able to reproduce the essential physics of the slinky. To learn about the applicability and limitations of the discrete model, and the implications of the various choices involved in defining it, the students build physical realizations of the model using masses (washers, nuts) tied to springs (rubber bands, stretchy silicone). Example physical models are show in examples are shown in \ref{fig:students}.  
+In order to be useful for understanding the the slinky drop, the discrete model needs to be able to reproduce the essential physics of the slinky. To learn about the applicability and limitations of the discrete model, and the implications of the various choices involved in defining it, the students built physical realizations of the model using masses (washers, nuts) tied to springs (rubber bands, stretchy silicone). The motion of physical models built using different parameters were compared and contrasted with each other and the motion of the actual slinky. Example physical models are show in examples are shown in \ref{fig:students}.  
 
 The primary focus of student investigation is whether, and under what circumstances, the physical mass and spring models demonstrate the levitation effect that they seek to understand.  To do this, students build many models with different masses and springs and note the manner in which they drop, as recorded by a high speed camera. From these observations, the students learn which physical properties of the slinky allow for the bottom to remain stationary when the top was released.  In particular, the students realize that the models must be very "stretchy" in order to for the levitation phenomenon to be pronounced.  Further, the students begin to appreciate how extremely stretchy the slinky is relative to other objects.
 
@@ -202,7 +202,7 @@ The primary focus of student investigation is whether, and under what circumstan
   \caption{The left panel shows the correlation of the slinkiness parameter with
            how stationary the bottom mass is. Specifically, the extent to which the
            bottom mass is stationary is measured as the distance the bottom mass falls
-           reletive to the stretched length of the system, during the time in which
+           relative to the stretched length of the system, during the time in which
            the top mass falls the full stretched length. The set of figures in the
            right panel shows the position as a function of time of four positions
            on the system. The top left is Model 3, the top right is 4 masses connected
@@ -211,7 +211,7 @@ The primary focus of student investigation is whether, and under what circumstan
   \label{fig:discretemodel}
 \end{figure*}
 
-\TODO{Motivate this defninition.}This stretchiness can be characterized by how much the object stretches
+\TODO{Motivate this definition.}This stretchiness can be characterized by how much the object stretches
 under it's own weight as it is suspended.   We can define a slinky parameter as a measure of this:
 
 \begin{equation}
@@ -221,17 +221,17 @@ under it's own weight as it is suspended.   We can define a slinky parameter as 
 where $L_h$ is the stretched length when suspended vertically and allowed to come to rest, and $L_0$ is the unstretched equilibrium length
 when no forces act on it.  It can be shown using Newton's Laws that in the case of the discrete masses and springs model,
 this stretching is actually proportional to the total mass $m$ and inversely proportional to the total effective spring constant $k_{\text{eff}}$ of the object.
-This is also true in the case of a continous model of the slinky that can support the transmission of waves.  The following dimensionless quantity
+This is also true in the case of a continuous model of the slinky that can support the transmission of waves.  The following dimensionless quantity
 can be constructed from the parameters of interest in the problem,
 \begin{equation}
 \mathcal{S'}=\frac{m g}{k_\text{eff} L_0 },
 \end{equation}
- and is infact proportional to the  slinky parameter defined above.  Here, $m$ is the total mass of the object, $g$ is the gravitational acceleration felt as it is suspended, $k_\text{eff}$ is the effective spring constant of the entire object, and $L_0$ is the unstretched length.  It can be a useful activity to experimentally 
+ and is in fact proportional to the  slinky parameter defined above.  Here, $m$ is the total mass of the object, $g$ is the gravitational acceleration felt as it is suspended, $k_\text{eff}$ is the effective spring constant of the entire object, and $L_0$ is the unstretched length.  It can be a useful activity to experimentally 
 confirm this proportionality, particularly when the target audience hasn't been previously exposed to Newton's laws.
 
 Now, in order to see that this parameter is a useful determining the "slinkiness", we must first choose a measure that allows us to compare how closely a model
 with a given set of parameters behaves like a slinky in the drop experiment.  Since the phenomena of interest is the lack of motion of the bottom of the slinky, 
-a good candidate could be the distance the bottom of the model falls in the time it takes for the model to collapse.  Figure \ref{} shows a plot of this distance, normalized by the stretched length unstretched length amount the object has stretched, for models over a range of different slinky parameters.  The slinky and simulations are also included in this graph.  One can see that the greater the slinky parameter, the less the bottom moves.  (or is there a threshold slinky parameter where  the bottom doesn't move beyond?).  We considered models with 4 masses, and have also shown the positions of the four masses as a function of time.  In order to facilitate comparisons between the models, the positioins have been normalized by the stretched length $L_h$, and the time is measured in units of $\sqrt{m/k_{\text{eff}}}$ of each of model.  
+a good candidate could be the distance the bottom of the model falls in the time it takes for the model to collapse.  Figure \ref{} shows a plot of this distance, normalized by the stretched length unstretched length amount the object has stretched, for models over a range of different slinky parameters.  The slinky and simulations are also included in this graph.  One can see that the greater the slinky parameter, the less the bottom moves.  (or is there a threshold slinky parameter where  the bottom doesn't move beyond?).  We considered models with 4 masses, and have also shown the positions of the four masses as a function of time.  In order to facilitate comparisons between the models, the positions have been normalized by the stretched length $L_h$, and the time is measured in units of $\sqrt{m/k_{\text{eff}}}$ of each of model.  
 
 %  \begin{table}[ht]
 %  \caption{Model Slinkies} % title of Table
@@ -311,7 +311,7 @@ The participatory simulation described here provides good practice in building
 a model by iteration and highlights the ability of the numerical approach to incorporate changes to the model. After beginning the activity, questions quickly arise, such
 as what to do when a mass passes through another mass. Nothing in the set of equations from \eq{coupleddes} prevents
 the masses from passing. The students may wish to allow this to happen as an approximation
-or they may wish to modify their procedure, perhaps by somehow merging any two masses which have overlaped
+or they may wish to modify their procedure, perhaps by somehow merging any two masses which have overlapped
 in the most recent time step. Follow up questions for discussion or investigation include
 the dependence of the simulation on the size of the time step and the number of masses.
 In building a simplified model, it also becomes easy to investigate
@@ -394,9 +394,9 @@ faster or slower than a wave pulse. Based on the distribution
 of density and tension expected in a suspended slinky, the speed of the wave should decrease significantly as
 it travels closer to the bottom of the slinky. This is to be compared with the
 accumulated clump of slinky as it falls. It now seems plausible
-that the clump might reach the bottom of the slinky before the wave can propagate to the bottom.
+that the clump might reach the bottom of the slinky before the wave can propagate to the bottom. \footnote{Indeed, a shock front analysis of a continuum model of the slinky (e.g. ~\cite{Unruh2011}) can be used to quantify the supersonic speed for the clump as a function of time as it travels to the bottom of the slinky.} 
 
-This can be verified experimentally. Two identical slinkies were suspended veritcally.
+This can be verified experimentally. Two identical slinkies were suspended vertically.
 We permanently suspended one slinky and initiated a wave pulse starting at the top.
 In this slinky, the medium does not collapse and only the pulse travels to the bottom. The other slinky was suspended and then dropped from the top. In this
 slinky, a clump would accumulate as the slinky fell to the bottom. Using a slow-motion camera, the trajectory of the wave pulse
@@ -508,7 +508,7 @@ Planetary Sciences at UC Berkeley and private donations.
 
 \NOTE{Fix person and tense}
 
-\NOTE{We will tend to reference things generically instead of about our students and tend to use present tense instead of past where possible, but in places where it preferrable to do it the other way, it is fine.}
+\NOTE{We will tend to reference things generically instead of about our students and tend to use present tense instead of past where possible, but in places where it preferable to do it the other way, it is fine.}
 
 \NOTE{Fix grammar and proofread!}
 
