@@ -1,0 +1,8 @@
+length = unLength+1.
+totMass = .200
+nMasses = 4
+collisions = True
+g = 9.8
+dt = .0002
+    
+Added length goes from 0. to 1. in steps of .1

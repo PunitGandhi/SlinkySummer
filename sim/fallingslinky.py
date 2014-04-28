@@ -2,23 +2,24 @@ from __future__ import division
 import numpy as np
 import matplotlib.pyplot as plt
 def main():
-    saveFile = 'heavytop.csv'
-    #M02082013/slinkym200l027_5r1ct.csv'
-    unLength = .075
-    length = unLength*20.
+    #saveFile = 'LengthChange/slinkym200l050r1_31ct.csv'
+    saveFile = 'LengthChange/slinky10.csv'
+    #unLength = .073+.075+.076+.027*3+.009
+    unLength = 1.
+    length = unLength+1.
     totMass = .200
-    nMasses = 100
+    nMasses = 4
     collisions = True 
     g = 9.8
     dt = .0002
-    nIter = 2000
+    nIter = 8000
     plotAll = True 
     #Calculated parameters
     lPer = unLength/(nMasses-1)
     m = totMass/nMasses
     k = (nMasses-1)*nMasses*m*g/(2*(length-unLength))
     masses = np.array([m for ii in xrange(nMasses)])
-    masses[0] = 100*masses[0]
+    #masses[0] = 100*masses[0]
     collapsed = [False for ii in xrange(nMasses)]
     y = np.zeros((nIter+1,nMasses))
     v = np.zeros_like(y)
