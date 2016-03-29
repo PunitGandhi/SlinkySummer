@@ -161,3 +161,14 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+# CSV
+*.csv
+
+# LaTeX
+*.log
+*.bbl
+*.aux
+*.blg
+*.out
+*.gz
